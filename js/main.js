@@ -64,18 +64,20 @@ function processTreino2()  {
             treino.push(["Abdômen na polia alta", 0, 8, 4, 0]);
             break;
         case "2":
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
+            treino.push(["Levantamento Terra", 0, 5, 5, 0]);
+            treino.push(["Remada curvada", 0, 5, 5, 0]);
+            treino.push(["Supino inclinado", 0, 5, 5, 0]);
+            treino.push(["Elevação lateral", 0, 8, 4, 0]);
+            treino.push(["Rosca testa", 0, 10, 4, 0]);
+            treino.push(["Rosca martelo", 0, 10, 4, 0]);
             break;
         case "3":
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Agachxivre", 0, 8, 4, 0]);
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
+            treino.push(["Passada", 0, 12, 3, 0]);
+            treino.push(["Paralelas", 0, 12, 3, 0]);
+            treino.push(["Barra-fixa pronada", 0, 12, 3, 0]);
+            treino.push(["Supino declinado", 0, 12, 3, 0]);
+            treino.push(["Elevação de gêmeos sentado", 0, 12, 4, 0]);
+            treino.push(["Elevação de pernas para abdômen", 0, 12, 4, 0]);
             break;            
     }
     var tablecontents = "";
