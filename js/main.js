@@ -56,6 +56,7 @@ function processTreino2()  {
     var treino = new Array();
     switch (codTreino) {
         case "1":
+            nome = "Treino 1"
             treino.push(["Agachamento Livre", 0, 8, 4, 0]);
             treino.push(["Supino reto com barra", 0, 8, 4, 0]);
             treino.push(["Barra fixa", 0, 6, 4, 0]);
@@ -64,6 +65,7 @@ function processTreino2()  {
             treino.push(["Abdômen na polia alta", 0, 8, 4, 0]);
             break;
         case "2":
+            nome = "Treino 2"
             treino.push(["Levantamento Terra", 0, 5, 5, 0]);
             treino.push(["Remada curvada", 0, 5, 5, 0]);
             treino.push(["Supino inclinado", 0, 5, 5, 0]);
@@ -72,6 +74,7 @@ function processTreino2()  {
             treino.push(["Rosca martelo", 0, 10, 4, 0]);
             break;
         case "3":
+            nome = "Treino 3"
             treino.push(["Passada", 0, 12, 3, 0]);
             treino.push(["Paralelas", 0, 12, 3, 0]);
             treino.push(["Barra-fixa pronada", 0, 12, 3, 0]);
@@ -89,4 +92,5 @@ function processTreino2()  {
         tablecontents += "</tr>";
     }
     document.getElementById("tabelaTreino").innerHTML = tablecontents;
+    document.getElementById("nomeTreino").innerHTML = nome;
 }
