@@ -177,3 +177,25 @@ function processTreino2()  {
     document.getElementById("tabelaTreino").innerHTML = tablecontents;
     document.getElementById("nomeTreino").innerHTML = nome;
 }
+
+function aumentaValor(id) {
+    var value = parseInt(document.getElementById(id).innerHTML,10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById(id).innerHTML = value;
+}
+
+function diminuiValor(id) {
+    var value = parseInt(document.getElementById(id).innerHTML, 10);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    document.getElementById(id).innerHTML = value;
+}
+
+function incrementValue(id)
+{
+    var value = parseInt(document.getElementById(id).innerHTML, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById(id).innerHTML = value;
+}
