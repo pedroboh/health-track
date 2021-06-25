@@ -122,12 +122,12 @@ function processTreino2()  {
     switch (codTreino) {
         case "1":
             nome = "Treino 1";
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Supino reto com barra", 0, 8, 4, 0]);
-            treino.push(["Barra fixa", 0, 6, 4, 0]);
-            treino.push(["Desenvolvimento com barra", 0, 8, 4, 0]);
-            treino.push(["Rosca direta", 0, 8, 4, 0]);
-            treino.push(["Abdômen na polia alta", 0, 8, 4, 0]);
+            treino.push(["Agachamento Livre", 0, 8, 4, '<span class="btn" id="t1e1" onclick="aumentaValor('+"'t1e1'"+')">0</span>']);
+            treino.push(["Supino reto com barra", 0, 8, 4, '<span class="btn" id="t1e2" onclick="aumentaValor('+"'t1e2'"+')">0</span>']);
+            treino.push(["Barra fixa", 0, 6, 4, '<span class="btn" id="t1e3" onclick="aumentaValor('+"'t1e3'"+')">0</span>']);
+            treino.push(["Desenvolvimento com barra", 0, 8, 4, '<span class="btn" id="t1e4" onclick="aumentaValor('+"'t1e4'"+')">0</span>']);
+            treino.push(["Rosca direta", 0, 8, 4, '<span class="btn" id="t1e5" onclick="aumentaValor('+"'t1e5'"+')">0</span>']);
+            treino.push(["Abdômen na polia alta", 0, 8, 4, '<span class="btn" id="t1e6" onclick="aumentaValor('+"'t1e6'"+')">0</span>']);
             break;
         case "2":
             nome = "Treino 2";
