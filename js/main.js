@@ -179,11 +179,14 @@ function processTreino2()  {
 }
 
 function processEditarTreino()  {
-    var modalBase = '<div class="modal fade" id="editExercicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">EDITAR EXERCÍCIO</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div class="d-flex flex-row flex-grow-1"><div class="mb-3 flex-grow-1"><label for="exampleInputEmail1" class="form-label">Nome do Exercício</label><input type="email" class="form-control flex-grow-1" id="exampleInputEmail1" value="Exercício 1" aria-describedby="emailHelp"></div></div><div class="d-flex flex-row"><div class="mb-3"><label for="exampleInputEmail1" class="form-label">Carga</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Repetições</label><input type="password" class="form-control" id="exampleInputPassword1"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Sets</label><input type="password" class="form-control" id="exampleInputPassword1"></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button><button type="button" class="btn btn-primary">Salvar</button></div></div></div></div>';
+    const modal1 = '<div class="modal fade" id="editExercicio';
+    const modal2 = '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">EDITAR EXERCÍCIO</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div class="d-flex flex-row flex-grow-1"><div class="mb-3 flex-grow-1"><label for="exampleInputEmail1" class="form-label">Nome do Exercício</label><input type="email" class="form-control flex-grow-1" id="exampleInputEmail1" value="Exercício ';
+    const modal3 = '" aria-describedby="emailHelp"></div></div><div class="d-flex flex-row"><div class="mb-3"><label for="exampleInputEmail1" class="form-label">Carga</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Repetições</label><input type="password" class="form-control" id="exampleInputPassword1"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Sets</label><input type="password" class="form-control" id="exampleInputPassword1"></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button><button type="button" class="btn btn-primary">Salvar</button></div></div></div></div>';
 
-    var botaoEdit = '<div class="btn btn-editar" data-bs-toggle="modal" data-bs-target="#editExercicio"><text class="d-none d-md-inline-block">Editar </text><i id="botedit" class="bi bi-pencil-square"></i></div>';
-    var botaoDelete = '<div class="btn btn-editar"><text class="d-none d-md-inline-block">Remover </text><i id="botedit" class="bi bi-trash"></i></div>'
-    var botoes = botaoEdit+botaoDelete+modalBase;
+    const botaoEdit1 = '<div class="btn btn-editar" data-bs-toggle="modal" data-bs-target="#editExercicio'
+    const botaoEdit2 = '"><text class="d-none d-md-inline-block">Editar </text><i id="botedit" class="bi bi-pencil-square"></i></div>';
+    var botaoDelete = '<div class="btn btn-editar"><text class="d-none d-md-inline-block">Remover </text><i id="botedit" class="bi bi-trash"></i></div>';
+    
 
     var parameters = location.search.substring(1);
   
@@ -194,13 +197,36 @@ function processEditarTreino()  {
     switch (codTreino) {
         case "1":
             nome = "Treino 1";
-            exercicio1 = ["Agachamento Livre", 0, 8, 4, '<span class="btn" id="t1e1" onclick="aumentaValor('+"'t1e1'"+')">0</span>', botoes];
-            treino.push(exercicio1);
-            treino.push(["Supino reto com barra", 0, 8, 4, '<span class="btn" id="t1e2" onclick="aumentaValor('+"'t1e2'"+')">0</span>']);
-            treino.push(["Barra fixa", 0, 6, 4, '<span class="btn" id="t1e3" onclick="aumentaValor('+"'t1e3'"+')">0</span>']);
-            treino.push(["Desenvolvimento com barra", 0, 8, 4, '<span class="btn" id="t1e4" onclick="aumentaValor('+"'t1e4'"+')">0</span>']);
-            treino.push(["Rosca direta", 0, 8, 4, '<span class="btn" id="t1e5" onclick="aumentaValor('+"'t1e5'"+')">0</span>']);
-            treino.push(["Abdômen na polia alta", 0, 8, 4, '<span class="btn" id="t1e6" onclick="aumentaValor('+"'t1e6'"+')">0</span>']);
+            codExercicio = "1";
+            botaoEdit = botaoEdit1+codExercicio+botaoEdit2;
+            botoes = botaoEdit+botaoDelete+modal1+codExercicio+modal2+codExercicio+modal3;
+            exercicio = ["Agachamento Livre", 0, 8, 4, botoes];
+            treino.push(exercicio);
+            codExercicio = "2"
+            botaoEdit = botaoEdit1+codExercicio+botaoEdit2;
+            botoes = botaoEdit+botaoDelete+modal1+codExercicio+modal2+codExercicio+modal3;
+            exercicio = ["Supino reto com barra", 0, 8, 4, botoes];
+            treino.push(exercicio);
+            codExercicio = "3"
+            botaoEdit = botaoEdit1+codExercicio+botaoEdit2;
+            botoes = botaoEdit+botaoDelete+modal1+codExercicio+modal2+codExercicio+modal3;
+            exercicio = ["Barra fixa", 0, 6, 4, botoes]
+            treino.push(exercicio);
+            codExercicio = "4"
+            botaoEdit = botaoEdit1+codExercicio+botaoEdit2;
+            botoes = botaoEdit+botaoDelete+modal1+codExercicio+modal2+codExercicio+modal3;
+            exercicio = ["Desenvolvimento com barra", 0, 8, 4, botoes]
+            treino.push(exercicio);
+            codExercicio = "5"
+            botaoEdit = botaoEdit1+codExercicio+botaoEdit2;
+            botoes = botaoEdit+botaoDelete+modal1+codExercicio+modal2+codExercicio+modal3;
+            exercicio = ["Rosca direta", 0, 8, 4, botoes]
+            treino.push(exercicio);
+            codExercicio = "6"
+            botaoEdit = botaoEdit1+codExercicio+botaoEdit2;
+            botoes = botaoEdit+botaoDelete+modal1+codExercicio+modal2+codExercicio+modal3;
+            exercicio = ["Abdômen na polia alta", 0, 8, 4, botoes]
+            treino.push(exercicio);
             break;
         case "2":
             nome = "Treino 2";
