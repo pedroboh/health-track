@@ -130,3 +130,8 @@ td,th {
 .table>:not(caption)>*>* {
   padding: .25rem .25rem;
 }
+
+.material-icons-outlined{
+  vertical-align : text-bottom;
+  font-size: 18px;
+}
