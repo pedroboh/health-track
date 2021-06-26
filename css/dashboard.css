@@ -135,3 +135,11 @@ td,th {
   vertical-align : text-bottom;
   font-size: 18px;
 }
+
+.btn-editar {
+  padding: 0px;
+}
+
+.edit-header {
+  white-space: nowrap;
+}

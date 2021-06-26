@@ -178,6 +178,80 @@ function processTreino2()  {
     document.getElementById("nomeTreino").innerHTML = nome;
 }
 
+function processEditarTreino()  {
+    var modalBase = '<div class="modal fade" id="editExercicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLabel">EDITAR EXERCÍCIO</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><div class="d-flex flex-row flex-grow-1"><div class="mb-3 flex-grow-1"><label for="exampleInputEmail1" class="form-label">Nome do Exercício</label><input type="email" class="form-control flex-grow-1" id="exampleInputEmail1" value="Exercício 1" aria-describedby="emailHelp"></div></div><div class="d-flex flex-row"><div class="mb-3"><label for="exampleInputEmail1" class="form-label">Carga</label><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Repetições</label><input type="password" class="form-control" id="exampleInputPassword1"></div><div class="mb-3"><label for="exampleInputPassword1" class="form-label">Sets</label><input type="password" class="form-control" id="exampleInputPassword1"></div></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button><button type="button" class="btn btn-primary">Salvar</button></div></div></div></div>';
+
+    var botaoEdit = '<div class="btn btn-editar" data-bs-toggle="modal" data-bs-target="#editExercicio"><text class="d-none d-md-inline-block">Editar </text><i id="botedit" class="bi bi-pencil-square"></i></div>';
+    var botaoDelete = '<div class="btn btn-editar"><text class="d-none d-md-inline-block">Remover </text><i id="botedit" class="bi bi-trash"></i></div>'
+    var botoes = botaoEdit+botaoDelete+modalBase;
+
+    var parameters = location.search.substring(1);
+  
+    var temp = parameters.split("=");
+    codTreino = unescape(temp[1]);
+    
+    var treino = new Array();
+    switch (codTreino) {
+        case "1":
+            nome = "Treino 1";
+            exercicio1 = ["Agachamento Livre", 0, 8, 4, '<span class="btn" id="t1e1" onclick="aumentaValor('+"'t1e1'"+')">0</span>', botoes];
+            treino.push(exercicio1);
+            treino.push(["Supino reto com barra", 0, 8, 4, '<span class="btn" id="t1e2" onclick="aumentaValor('+"'t1e2'"+')">0</span>']);
+            treino.push(["Barra fixa", 0, 6, 4, '<span class="btn" id="t1e3" onclick="aumentaValor('+"'t1e3'"+')">0</span>']);
+            treino.push(["Desenvolvimento com barra", 0, 8, 4, '<span class="btn" id="t1e4" onclick="aumentaValor('+"'t1e4'"+')">0</span>']);
+            treino.push(["Rosca direta", 0, 8, 4, '<span class="btn" id="t1e5" onclick="aumentaValor('+"'t1e5'"+')">0</span>']);
+            treino.push(["Abdômen na polia alta", 0, 8, 4, '<span class="btn" id="t1e6" onclick="aumentaValor('+"'t1e6'"+')">0</span>']);
+            break;
+        case "2":
+            nome = "Treino 2";
+            treino.push(["Levantamento Terra", 0, 5, 5, 0]);
+            treino.push(["Remada curvada", 0, 5, 5, 0]);
+            treino.push(["Supino inclinado", 0, 5, 5, 0]);
+            treino.push(["Elevação lateral", 0, 8, 4, 0]);
+            treino.push(["Rosca testa", 0, 10, 4, 0]);
+            treino.push(["Rosca martelo", 0, 10, 4, 0]);
+            break;
+        case "3":
+            nome = "Treino 3";
+            treino.push(["Passada", 0, 12, 3, 0]);
+            treino.push(["Paralelas", 0, 12, 3, 0]);
+            treino.push(["Barra-fixa pronada", 0, 12, 3, 0]);
+            treino.push(["Supino declinado", 0, 12, 3, 0]);
+            treino.push(["Elevação de gêmeos sentado", 0, 12, 4, 0]);
+            treino.push(["Elevação de pernas para abdômen", 0, 12, 4, 0]);
+            break;
+        case "4":
+            nome = "Upper";
+            treino.push(["Supino Reto(halteres ou barra)", 0, 8, 4, 0]);
+            treino.push(["Remada curvada", 0, 8, 4, 0]);
+            treino.push(["Desenvolvimento com halteres sentado", 0, 8, 4, 0]);
+            treino.push(["Barra-fixa ou puxada na polia", 0, 8, 4, 0]);
+            treino.push(["Rosca francesa", 0, 10, 4, 0]);
+            treino.push(["Rosca alternada", 0, 10, 4, 0]);
+            treino.push(["Abdômen na polia alta", 0, 12, 4, 0]);
+            break;
+        case "5":
+            nome = "Lower";
+            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
+            treino.push(["Legpress", 0, 8, 4, 0]);
+            treino.push(["Passada", 0, 10, 4, 0]);
+            treino.push(["Flexora", 0, 10, 4, 0]);
+            treino.push(["Elevação de gêmeos sentado", 0, 12, 4, 0]);
+            treino.push(["Elevação de gêmeos em pé", 0, 12, 4, 0]);
+    }
+    var tablecontents = "";
+    for (var i = 0; i < treino.length; i++) {
+        tablecontents += "<tr>";
+        for (var j = 0; j < treino[i].length; j++) {
+            tablecontents += "<td>" + treino[i][j] + "</td>";
+        }
+        tablecontents += "</tr>";
+    }
+    document.getElementById("tabelaTreino").innerHTML = tablecontents;
+    document.getElementById("nomeTreino").innerHTML = nome;
+}
+
+
 function aumentaValor(id) {
     var value = parseInt(document.getElementById(id).innerHTML,10);
     value = isNaN(value) ? 0 : value;
