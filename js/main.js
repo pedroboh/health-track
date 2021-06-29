@@ -188,7 +188,7 @@ function processEditarTreino()  {
 
     const botaoEdit1 = '<div class="btn btn-editar" data-bs-toggle="modal" data-bs-target="#editExercicio'
     const botaoEdit2 = '"><text class="d-none d-md-inline-block">Editar </text><i id="botedit" class="bi bi-pencil-square"></i></div>';
-    const botaoDelete = '<div class="btn btn-editar" data-bs-toggle="modal" data-bs-target="#excluir"><text class="d-none d-md-inline-block">Excluir </text><i id="botedit" class="bi bi-trash"></i></div>';
+    const botaoDelete = '<div class="btn btn-editar"><text class="d-none d-md-inline-block">Remover </text><i id="botedit" class="bi bi-trash"></i></div>';
     
 
     var parameters = location.search.substring(1);
