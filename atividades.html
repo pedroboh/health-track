@@ -35,107 +35,66 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
     
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="./index.html">Health Track</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="./index.html">Sign out</a>
-    </div>
-  </div>
-</header>
-
-<div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./dashboard.html">
-              <span class="material-icons-outlined">timeline</span>
-              Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./historico.html">
-              <span class="material-icons-outlined">monitor_weight</span>
-              Pesos
-            </a>
-          <li class="nav-item">
-              <a class="nav-link active" href="./atividades.html">
-              <span class="material-icons-outlined">history</span>
-              Atividades  
-            </a>            
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./treinos.html">
-              <span class="material-icons-outlined">fitness_center</span>
-              Treinos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./refeicoes.html">
-              <span class="material-icons-outlined">restaurant</span>
-              Refeições
-            </a>
-          </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
-            </a>
-          </li>-->
-        </ul>
-
-        <!--<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>-->
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="./index.html">Health Track</a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-nav d-none d-md-block">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="./index.html">Sign out</a>
+        </div>
       </div>
-    </nav>
+    </header>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./dashboard.html">
+                  <span class="material-icons-outlined">timeline</span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./historico.html">
+                  <span class="material-icons-outlined">monitor_weight</span>
+                  Pesos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./refeicoes.html">
+                  <span class="material-icons-outlined">restaurant</span>
+                  Refeições
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./atividades.html">
+                <span class="material-icons-outlined">history</span>
+                Atividades  
+              </a>            
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./treinos.html">
+                  <span class="material-icons-outlined">fitness_center</span>
+                  Treinos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-md-none" href="./index.html">Sign out</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-       <h2>Histórico de atividades</h2>
+       <h2 class="subtitulo">Histórico de atividades</h2>
        <div class="row"">
         <div class="col-2 d-none d-lg-block"></div>
       <div class="table-responsive col">
@@ -153,113 +112,113 @@
             <tr>
               <td>1</td>
               <td>30/06/2021</td>
-              <td>Almoço</td>
-              <td>101</td>
+              <td>Corrida</td>
+              <td>201</td>
               <td><text class="d-none d-md-inline-block">Editar </text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block">Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>2</td>
               <td>26/05/2021</td>
-              <td>Almoço</td>
-              <td>102,5</td>
+              <td>Corrida</td>
+              <td>202</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></td>
             </tr>
             <tr>
               <td>3</td>
               <td>19/04/2021</td>
-              <td>Almoço</td>
-              <td>102,6</td>
+              <td>Corrida</td>
+              <td>302</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></td>
             </tr>
             <tr>
               <td>4</td>
               <td>18/04/2021</td>
-              <td>Almoço</td>
-              <td>102,8</td>
+              <td>Corrida</td>
+              <td>102</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></td>
             </tr>
             <tr>
               <td>5</td>
               <td>13/04/2021</td>
-              <td>Almoço</td>
-              <td>103,0</td>
+              <td>Corrida</td>
+              <td>203</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>6</td>
               <td>10/04/2021</td>
-              <td>Almoço</td>
-              <td>103,1</td>
+              <td>Corrida</td>
+              <td>203</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>7</td>
               <td>02/04/2021</td>
-              <td>Almoço</td>
-              <td>104,6</td>
+              <td>Corrida</td>
+              <td>304</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>8</td>
               <td>10/02/2021</td>
-              <td>Almoço</td>
-              <td>104,2</td>
+              <td>Corrida</td>
+              <td>304</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>9</td>
               <td>14/12/2020</td>
-              <td>Almoço</td>
-              <td>107,2</td>
+              <td>Corrida</td>
+              <td>207</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>10</td>
               <td>12/09/2020</td>
-              <td>Almoço</td>
-              <td>105,6</td>
+              <td>Corrida</td>
+              <td>205</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>11</td>
               <td>05/08/2020</td>
-              <td>Almoço</td>
-              <td>106,1</td>
+              <td>Corrida</td>
+              <td>206</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>12</td>
               <td>27/07/2020</td>
-              <td>Almoço</td>
-              <td>106,0</td>
+              <td>Corrida</td>
+              <td>206</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>13</td>
               <td>17/07/2020</td>
-              <td>Almoço</td>
-              <td>106,8</td>
+              <td>Corrida</td>
+              <td>206</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>14</td>
               <td>04/07/2020</td>
-              <td>Almoço</td>
-              <td>107,2</td>
+              <td>Corrida</td>
+              <td>307</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>15</td>
               <td>25/06/2020</td>
-              <td>Almoço</td>
-              <td>108,5</td>
+              <td>Corrida</td>
+              <td>208</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
             <tr>
               <td>16</td>
               <td>11/06/2020</td>
-              <td>Almoço</td>
-              <td>110</td>
+              <td>Corrida</td>
+              <td>220</td>
               <td><text class="d-none d-md-inline-block">Editar</text><i id="botedit" class="bi bi-pencil-square"></i><text class="d-none d-md-inline-block"> Remover </text><i id="botedit" class="bi bi-trash"></i></td>
             </tr>
           </tbody>
