@@ -55,7 +55,7 @@ function processTreino(codTreino,tabela)  {
     switch (codTreino) {
         case 1:
             nome = "Treino 1";
-            treino.push(["Agachamento Livre", 0, 8, 4]);
+            treino.push(["Agachamento Livre", '<span class="num-tabela">0</span>', '<span class="num-tabela">8</span>', '<span class="num-tabela">4</span>']);
             treino.push(["Supino reto com barra", 0, 8, 4]);
             treino.push(["Barra fixa", 0, 6, 4]);
             treino.push(["Desenvolvimento com barra", 0, 8, 4]);
@@ -64,8 +64,8 @@ function processTreino(codTreino,tabela)  {
             break;
         case 2:
             nome = "Treino 2";
-            treino.push(["Levantamento Terra", 0, 5, 5]);
-            treino.push(["Remada curvada", 0, 5, 5]);
+            treino.push(["Levantamento Terra", '<span class="num-tabela">0</span>', '<span class="num-tabela">5</span>', '<span class="num-tabela">5</span>']);
+            treino.push(["Remada curvada", '<span class="num-tabela">0</span>', 5, 5]);
             treino.push(["Supino inclinado", 0, 5, 5]);
             treino.push(["Elevação lateral", 0, 8, 4]);
             treino.push(["Rosca testa", 0, 10, 4]);
@@ -73,7 +73,7 @@ function processTreino(codTreino,tabela)  {
             break;
         case 3:
             nome = "Treino 3";
-            treino.push(["Passada", 0, 12, 3]);
+            treino.push(["Passada", '<span class="num-tabela">0</span>', '<span class="num-tabela">12</span>', '<span class="num-tabela">3</span>']);
             treino.push(["Paralelas", 0, 12, 3]);
             treino.push(["Barra-fixa pronada", 0, 12, 3]);
             treino.push(["Supino declinado", 0, 12, 3]);
@@ -82,7 +82,7 @@ function processTreino(codTreino,tabela)  {
             break;
         case 4:
             nome = "Upper";
-            treino.push(["Supino Reto(halteres ou barra)", 0, 8, 4]);
+            treino.push(["Supino Reto(halteres ou barra)", '<span class="num-tabela">0</span>','<span class="num-tabela">8</span>', '<span class="num-tabela">4</span>']);
             treino.push(["Remada curvada", 0, 8, 4]);
             treino.push(["Desenvolvimento com halteres sentado", 0, 8, 4]);
             treino.push(["Barra-fixa ou puxada na polia", 0, 8, 4]);
@@ -92,7 +92,7 @@ function processTreino(codTreino,tabela)  {
             break;
         case 5:
             nome = "Lower";
-            treino.push(["Agachamento Livre", 0, 8, 4]);
+            treino.push(["Agachamento Livre", '<span class="num-tabela">0</span>', '<span class="num-tabela">8</span>', '<span class="num-tabela">4</span>']);
             treino.push(["Legpress", 0, 8, 4]);
             treino.push(["Passada", 0, 10, 4]);
             treino.push(["Flexora", 0, 10, 4]);
@@ -122,7 +122,7 @@ function processTreino2()  {
     switch (codTreino) {
         case "1":
             nome = "Treino 1";
-            treino.push(["Agachamento Livre", 0, 8, 4, '<span class="btn" id="t1e1" onclick="aumentaValor('+"'t1e1'"+')">0</span>']);
+            treino.push(["Agachamento Livre", '<span class="num-tabela">0</span>', '<span class="num-tabela">8</span>', '<span class="num-tabela">4</span>', '<span class="btn" id="t1e1" onclick="aumentaValor('+"'t1e1'"+')">0</span>']);
             treino.push(["Supino reto com barra", 0, 8, 4, '<span class="btn" id="t1e2" onclick="aumentaValor('+"'t1e2'"+')">0</span>']);
             treino.push(["Barra fixa", 0, 6, 4, '<span class="btn" id="t1e3" onclick="aumentaValor('+"'t1e3'"+')">0</span>']);
             treino.push(["Desenvolvimento com barra", 0, 8, 4, '<span class="btn" id="t1e4" onclick="aumentaValor('+"'t1e4'"+')">0</span>']);
@@ -131,40 +131,40 @@ function processTreino2()  {
             break;
         case "2":
             nome = "Treino 2";
-            treino.push(["Levantamento Terra", 0, 5, 5, 0]);
-            treino.push(["Remada curvada", 0, 5, 5, 0]);
-            treino.push(["Supino inclinado", 0, 5, 5, 0]);
-            treino.push(["Elevação lateral", 0, 8, 4, 0]);
-            treino.push(["Rosca testa", 0, 10, 4, 0]);
-            treino.push(["Rosca martelo", 0, 10, 4, 0]);
+            treino.push(["Levantamento Terra", '<span class="num-tabela">0</span>', 5, 5, 0]);
+            treino.push(["Remada curvada", '<span class="num-tabela">0</span>', 5, 5, 0]);
+            treino.push(["Supino inclinado", '<span class="num-tabela">0</span>', 5, 5, 0]);
+            treino.push(["Elevação lateral", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Rosca testa", '<span class="num-tabela">0</span>', 10, 4, 0]);
+            treino.push(["Rosca martelo", '<span class="num-tabela">0</span>', 10, 4, 0]);
             break;
         case "3":
             nome = "Treino 3";
-            treino.push(["Passada", 0, 12, 3, 0]);
-            treino.push(["Paralelas", 0, 12, 3, 0]);
-            treino.push(["Barra-fixa pronada", 0, 12, 3, 0]);
-            treino.push(["Supino declinado", 0, 12, 3, 0]);
-            treino.push(["Elevação de gêmeos sentado", 0, 12, 4, 0]);
-            treino.push(["Elevação de pernas para abdômen", 0, 12, 4, 0]);
+            treino.push(["Passada", '<span class="num-tabela">0</span>', 12, 3, 0]);
+            treino.push(["Paralelas", '<span class="num-tabela">0</span>', 12, 3, 0]);
+            treino.push(["Barra-fixa pronada", '<span class="num-tabela">0</span>', 12, 3, 0]);
+            treino.push(["Supino declinado", '<span class="num-tabela">0</span>', 12, 3, 0]);
+            treino.push(["Elevação de gêmeos sentado", '<span class="num-tabela">0</span>', 12, 4, 0]);
+            treino.push(["Elevação de pernas para abdômen", '<span class="num-tabela">0</span>', 12, 4, 0]);
             break;
         case "4":
             nome = "Upper";
-            treino.push(["Supino Reto(halteres ou barra)", 0, 8, 4, 0]);
-            treino.push(["Remada curvada", 0, 8, 4, 0]);
-            treino.push(["Desenvolvimento com halteres sentado", 0, 8, 4, 0]);
-            treino.push(["Barra-fixa ou puxada na polia", 0, 8, 4, 0]);
-            treino.push(["Rosca francesa", 0, 10, 4, 0]);
-            treino.push(["Rosca alternada", 0, 10, 4, 0]);
-            treino.push(["Abdômen na polia alta", 0, 12, 4, 0]);
+            treino.push(["Supino Reto(halteres ou barra)", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Remada curvada", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Desenvolvimento com halteres sentado", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Barra-fixa ou puxada na polia", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Rosca francesa", '<span class="num-tabela">0</span>', 10, 4, 0]);
+            treino.push(["Rosca alternada", '<span class="num-tabela">0</span>', 10, 4, 0]);
+            treino.push(["Abdômen na polia alta", '<span class="num-tabela">0</span>', 12, 4, 0]);
             break;
         case "5":
             nome = "Lower";
-            treino.push(["Agachamento Livre", 0, 8, 4, 0]);
-            treino.push(["Legpress", 0, 8, 4, 0]);
-            treino.push(["Passada", 0, 10, 4, 0]);
-            treino.push(["Flexora", 0, 10, 4, 0]);
-            treino.push(["Elevação de gêmeos sentado", 0, 12, 4, 0]);
-            treino.push(["Elevação de gêmeos em pé", 0, 12, 4, 0]);
+            treino.push(["Agachamento Livre", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Legpress", '<span class="num-tabela">0</span>', 8, 4, 0]);
+            treino.push(["Passada", '<span class="num-tabela">0</span>', 10, 4, 0]);
+            treino.push(["Flexora", '<span class="num-tabela">0</span>', 10, 4, 0]);
+            treino.push(["Elevação de gêmeos sentado", '<span class="num-tabela">0</span>', 12, 4, 0]);
+            treino.push(["Elevação de gêmeos em pé", '<span class="num-tabela">0</span>', 12, 4, 0]);
     }
     var tablecontents = "";
     for (var i = 0; i < treino.length; i++) {
