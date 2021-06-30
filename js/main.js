@@ -311,35 +311,37 @@ function incrementValue(id)
 
 /* globals Chart:false, feather:false */
 
-function graficoPeso () {
+function graficoPeso (id) {
     'use strict'
   
     feather.replace({ 'aria-hidden': 'true' })
   
     // Graphs
-    var ctx = document.getElementById('myChart')
+    var ctx = document.getElementById(id)
     // eslint-disable-next-line no-unused-vars
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: [
-          'Domingo',
-          'Segunda',
-          'Terça',
-          'Quarta',
-          'Quinta',
-          'Sexta',
-          'Sábado'
+          '10/02/2021',
+          '02/04/2021',
+          '10/04/2021',
+          '13/04/2021',
+          '18/04/2021',
+          '19/04/2021',
+          '26/05/2021',
+          '30/06/2021'
         ],
         datasets: [{
           data: [
-            110,
-            108.5,
-            107.2,
-            106.8,
-            106.0,
-            106.1,
-            105.6
+            104.2,
+            104.6,
+            103.1,
+            103,
+            102.8,
+            102.6,
+            102.5,
+            101
           ],
           lineTension: 0,
           backgroundColor: 'transparent',
@@ -355,6 +357,62 @@ function graficoPeso () {
               beginAtZero: false
             }
           }]
+        },
+        legend: {
+          display: false
+        }
+      }
+    })
+  }
+  
+
+  function graficoAtividades (id) {
+    'use strict'
+  
+    feather.replace({ 'aria-hidden': 'true' })
+  
+    // Graphs
+    var ctx = document.getElementById(id)
+    // eslint-disable-next-line no-unused-vars
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          '10/02/2021',
+          '02/04/2021',
+          '10/04/2021',
+          '13/04/2021',
+          '18/04/2021',
+          '19/04/2021',
+          '26/05/2021',
+          '30/06/2021'
+        ],
+        datasets: [{
+          data: [
+            304,
+            304,
+            203,
+            203,
+            102,
+            302,
+            202,
+            201
+          ],
+          lineTension: 0,
+          backgroundColor: 'transparent',
+          borderColor: '#007bff',
+          borderWidth: 4,
+          pointBackgroundColor: '#007bff'
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: false
+            },
+
+          }]          
         },
         legend: {
           display: false
